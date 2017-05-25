@@ -10,4 +10,5 @@ Bike.prototype.getLocation = function(city, displayLocations) {
   });
 };
 
+
 exports.bikeModule = Bike;
