@@ -1,10 +1,8 @@
-// var apiKey = require('./../.env').apiKey;
-
 Bike = function() {
 }
 
 Bike.prototype.getLocation = function(city, displayLocations) {
-  $.get('https://bikeindex.org:443/api/v3/search?page=1&per_page=25&location='+ city)
+  $.get('https://bikeindex.org:443/api/v3/search?page=1&per_page=25&location=' + city + '&distance=10&stolenness=proximity')
   .then(function(response) {
     displayLocations(city, response.bikes.stolen_location);
   })
