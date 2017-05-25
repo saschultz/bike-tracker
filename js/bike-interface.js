@@ -1,13 +1,14 @@
 var Bike = require('./../js/bike.js').bikeModule;
 
-var displayLocations = function(city, locationData) {
-  $('.showLocation').text('Stolen bikes: ' + city + locationData);
-}
+// var displayLocations = function(locationData) {
+//   console.log(locationData)
+//   // $('.showLocation').text('Stolen bikes: ' + locationData);
+// }
 
 $(document).ready(function() {
   $('#location').click(function() {
     var currentBikeObject = new Bike();
     var city = $('#city').val();
-    currentBikeObject.getLocation(city, displayLocations);
+    currentBikeObject.getLocation(city);
   });
 });
